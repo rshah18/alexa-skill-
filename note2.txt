@@ -43,4 +43,53 @@ customer-to-alexa-your alexa skill
 
 ---> use the voice design to build your interactive model 
 
-* The requests your skill can handle 
+* The requests your skill can handle are represented as intents
+
+* Intents can optionally have arguments called slots.
+
+* Sample utterances map the intents to the words and phrases users can say to interact with your skill.
+
+* A dialog model identifies information your skill requires and the prompts Alexa can use to collect and confirm that information in a conversation with the user.
+
+*  You can also enter and edit the JSON for the interaction model in the JSON Editor. 
+
+* Create the JSON for the interaction model and create or update your skill with the Skill Management API or the ASK Command Line Interface.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+coding 
+
+  * Your primary coding task for your skill is to create a service that can accept requests from the Alexa service and send back responses.
+
+  * For the quickest start, create an AWS Lambda function to host the service for your skill. 
+
+  * Write the code for your skill. If you are using Lambda, you can code in Node.js, Java, Python, C#, or Go.
+     If you are hosting your skill as a web service, you can use any programming language.
+    
+  * In the developer console, update your skill with your endpoint (for instance, the Lambda ARN).
+
+  * Test your skill with the Test page or an Alexa-enabled device.
+
+  * Update the metadata about your skill that will appear in the Alexa Skills Store in the Alexa app.
+
+  * Once your skill is finished, you have the option of setting up a beta test for your skill. 
+    With a beta test, you can make your skill available to a limited group of testers that you have personally selected, 
+    rather than to the general public.
+
+  -------------------------------------------------------------------------------------------------------------------------------------
+
+  submit 
+
+  *  Run the validation and functional tests on the Certification page in the developer console.
+     These tests help you identify issues that you need to fix before you submit the skill.
+
+  * Review the submission checklist. This checklist includes the tests performed by Amazon's certification team,
+    so passing all of these tests can speed up the certification process.
+  
+  * When you are ready for your skill to be made public, and you have ensured that your skill fulfills
+    the requirements on the certification checklist, submit your skill for certification.
+
+  * Once your skill is published, Amazon customers can see it in the Alexa App and choose to enable and use it.
+  ------------------------------------------------------------------------------------------------------------------------------------
+
+  

@@ -1,0 +1,37 @@
+                                *** design of custom skills ***
+
+for custom skills, you create the following:
+    1. intent 
+    2. utterances
+    3. media
+    4. A cloud based service (end points) 
+    5. configuration
+
+
+* a set of intents that represent actions that users can do with your skill. these intents represent the core functionality for your skill
+
+* a set of sample utterances that specify the words and pharases users can say to invoke those intents. 
+    you map these utterances to your intents. This mapping forms the interaction model for the skill
+
+* an invocation name that identifies the skill. the user includes this name when initiating a conversation with your skill
+
+* if applicable, a set of images, audio, video that you want to include in the skill. these must be stored on a publicly accessible
+  site so that each item is accessible by a unique url.
+
+*  a cloud based service that accepts these intents as structured requests and then act upon them. you provide an endpoint 
+    for your service  when configuring the skill. 
+
+* A configuration that brings all of the above together so that alexa can route requests to the service for your skill. you create this 
+    configuration in the developer console 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+build your skill 
+
+    * invocation : phrase users say to begin an interaction with your skill. 
+    * intent: action that fulfills a user's spoken request. 
+    * slots : arguments for intents. has a type that determines how alexa handles users spoken data
+    * json editor: editing interaction model for your skill. 
+    * Interfaces: audio player, display, gadget controller, game engine etc. 
+    * endpoint: alexa sends requests to this endpoint when users invoke your skill. eg. lambda arn, https 
+    
