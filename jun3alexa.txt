@@ -1,0 +1,46 @@
+Plan 
+* design, prototyping, development, 
+* meet every other week
+* question theme/navigation for CSU campuses 
+* ready for college script inventory 
+
+* these questions are about:
+** can i get into campus
+** requirements
+** will i need a car 
+** financial needs etc
+** every other question about college
+** exploring colleges
+** navigating colleges
+** paying for colleg 
+** improving conversation experience 
+** every campus under csu 
+
+** categorical list of these questions
+** flow chart for list of questions
+** transportation, housing, paying, safety, 
+** where does the conversation end
+** would like more information and similar things to end the conversation
+** you want conversation flow going on 
+** designing for conversation course
+** scripting writing team. list top questions 
+** ask which campus you need info about in advance. 
+** email them for more detail 
+** campus specific message crafting 
+** redirect to different set of questions depending on the campus she or he chooses
+** script and flow before they come to technical team
+
+** go to right to the source to get more detail 
+** technical team can choose what questions are going to continue conversation
+
+** first phase, first iteration, 
+
+*** how about we implement it in our library 
+*** kyle shaver - tech - northridge i guess
+*** june 10 start date, 
+*** aws credit for development
+
+-----------------------------------------------------------------------------------------------------------
+* script team
+* development team
+* slack channel 

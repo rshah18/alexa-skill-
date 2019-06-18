@@ -1,0 +1,46 @@
+
+                                *** Creating a custom skill ***
+
+When designing and building a custom skill, you create the following:
+
+  *  A set of intents that represent actions that users can do with your skill. These intents represent the core     functionality for your skill.
+
+  *  A set of sample utterances that specify the words and phrases users can say to invoke those intents. You map    these utterances to your intents. This mapping forms the interaction model for the skill.
+
+  *  An invocation name that identifies the skill. The user includes this name when initiating a conversation        with your skill.
+
+  *  If applicable, a set of images, audio files, and video files that you want to include in the skill. These       must be stored on a publicly accessible site so that each item is accessible by a unique URL.
+   
+  *  A cloud-based service that accepts these intents as structured requests and then acts upon them. This           service must be accessible over the Internet. You provide an endpoint for your service when configuring the     skill.
+    
+  *  A configuration that brings all of the above together so that Alexa can route requests to the service for       your skill. You create this configuration in the developer console.
+
+
+----------------------------------------------------------------------------------------------------------
+
+customer-to-alexa-your alexa skill
+
+    * customer asks a question or a gives a command
+    * alexa identifies your skill's name, analyzes and understands the customer's requests, then send your service a structured representation of the user's request.
+    * your service processes the request and returns a text and graphical response 
+    * alexa converts the returned text to speech and streams it to the device - customer hears the response from alexa's speech 
+
+    * your graphical representation is rendered in the companion app- customer sees a graphical representation in the companion app 
+
+----------------------------------------------------------------------------------------------------------
+ * The Amazon Alexa App is a free companion app available for Fire OS, Android, iOS, and desktop web browsers.
+
+ * Any such external resources must be available on a publicly accessible website. Each item is referenced by a unique URL that uses HTTPS.
+
+----------------------------------------------------------------------------------------------------------
+
+---> Design a voice user interface
+
+* create a flow diagram that maps out how users will interact with the skill. 
+* If your skill is designed to include images, gather that content and store them on a publicly accessible site. 
+
+---> set up the skill in the developer console. when prompted to choose a model, select the custom model
+
+---> use the voice design to build your interactive model 
+
+* The requests your skill can handle 

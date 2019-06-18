@@ -1,0 +1,63 @@
+basics: 
+* The Alexa Skills Kit lets you teach Alexa new skills
+* The first step in building a new skill is to decide what your skill will do
+* You create a cloud-based service that handles the requests for the skill type and host it in the cloud. 
+* the Alexa service routes incoming requests to the appropriate service.
+* For a custom skill, you code either an AWS Lambda function or a web service:
+* AWS Lambda (an Amazon Web Services offering) is a service that lets you run code in the cloud without managing    servers. 
+-----------------------------------------------------------------------------------------------------------------
+For a custom skill, you code either an AWS Lambda function or a web service:
+
+*  AWS Lambda (an Amazon Web Services offering) is a service that lets you run code in the cloud without managing    servers. Alexa sends your code user requests and your code can inspect the request, take any necessary actions    (such as looking up information online) and then send back a response. You can write Lambda functions in           Node.js, Java, Python, C#, or Go.
+
+*  Alternatively, you can write a web service and host it with any cloud hosting provider. The web service must      accept requests over HTTPS. In this case, Alexa sends requests to your web service and your service takes any     necessary actions and sends back a response. You can write your web service in any language.
+
+*  Regardless of how you create your service, you also create a custom interaction model for the skill. This         defines the requests the skill can handle and the words users can say to invoke those requests.
+-----------------------------------------------------------------------------------------------------------------
+aws lambda process
+
+    * You provide code to handle directives in an AWS Lambda function.
+    * Your skill receives requests in the form of device directives to control a particular device. Your code       then handles the request appropriately (for example, by turning on the requested light or turning up the      volume).
+    * All voice interactions with the user are handled by the Smart Home Skill API. You don't need to define the    words users say to use the skill.
+------------------------------------------------------------------------------------------------------------------
+Every skill has an interaction model that determines the requests the skill can handle and the words users say to invoke those requests. You can define this yourself with a custom model. 
+
+For a custom skill, you (as the developer) define:
+ * The requests the skill can handle.
+ * The words users say to make (or invoke) those requests.
+ * The visual and touch interactions that users will experience and can invoke. 
+ * The name Alexa uses to identify your skill, called the invocation name.
+------------------------------------------------------------------------------------------------------------------
+choose type of skill you are building: 
+* For building a skill to control smart home devices such as cameras, lights, locks, thermostats, and smart TVs,    you should use the Smart Home pre-built model. 
+
+* A list skill is created through the ASK CLI (Alexa Skills Kit Command Line Interface).
+
+
+-----------------------------------------------------------------------------------------------------------------
+Understand How Users Interact with Skills
+
+  * When a user speaks to a device with Alexa, the speech is streamed to the Alexa service in the cloud. Alexa      recognizes the speech, determines what the user wants, and then sends a structured request to the particular    skill that can fulfill the user's request. All speech recognition and conversion is handled by Alexa in the     cloud.
+
+  * Every Alexa skill has an interaction model defining the words and phrases users can say to make the skill do    what they want. This model determines how Alexa communicates with your users.
+
+  ---------------------------------------------------------------------------------------------------------------
+
+  Needed for a custom skill :
+    * An Internet-accessible endpoint for hosting your cloud-based service.
+
+    The simplest option for this is to use AWS Lambda (an Amazon Web Services offering). In this case, you need an account with Amazon Web Services in addition to your Amazon developer account.
+
+    Alternatively, you can build and host an HTTPS web service. In this case, you will need a cloud hosting provider and an SSL certificate.
+
+    * You can author a Lambda function in Node.js, Java, Python, C#, or Go. You can author a web service in any language appropriate for web services.
+
+    * A publicly accessible web site to host any images, audio files, or video files that you use in your skill. One possible solution is to use an Amazon Simple Storage Service (S3) instance
+
+    * Optionally, a device with Alexa for testing. If you don't have a device, you can use a simulator on the Test page for testing. 
+
+------------------------------------------------------------------------------------------------------------------
+
+Needed for a smart home skill:
+    * The cloud-enabled device that you want to control
+    * An account with Amazon Web Services, needed for a Lambda function to host the skill code. Skills built with the Smart Home API must be hosted on AWS Lambda.
