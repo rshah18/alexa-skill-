@@ -1,3 +1,4 @@
+https://acloud.guru/series/alexa-devs/view/101
 * steps:
     1. create alexa skill 
     2. create lambda function 
