@@ -1,0 +1,26 @@
+* steps:
+    1. create alexa skill 
+    2. create lambda function 
+    3. link lambda function to alexa skills 
+    4. test skill 
+    5. submit skill 
+
+* lambda functions for custom skills can be only hosted in oregon and n virginia
+
+* if you publish to alexa store you can qualify for 100 aws promotional credit
+
+* the more use you will get more money 
+
+* simple fact skill 
+-----------------------------------------------------------------------------------------------------------
+
+* when alexa is connected to the same account as developer account. alexa has access to them in development phase
+
+* skill kit-> create skill 
+    1. Give skill name & language 
+    2. choose custom 
+    
+* build, test, launch, measure tabs
+* custom tab, skill builder check list
+    1. give skill invokation name 
+    2. create intent name
