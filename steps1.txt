@@ -1,0 +1,6 @@
+1. sign in to developer console and select skills link
+2. create skill, name it, choose custom model and create skill button
+3. build the interactive model for your skill 
+4. select JSON editor under interaction model 
+5. add code to the editor 
+6. 

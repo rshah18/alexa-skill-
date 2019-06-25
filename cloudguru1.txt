@@ -21,7 +21,73 @@ https://acloud.guru/series/alexa-devs/view/101
     1. Give skill name & language 
     2. choose custom 
     
+* An intent represents an action that fulfills a user's spoken request 
+* Each intent name matches with specific function in our code
+* there are also built in intent that aws provides
+
+* utterances: words or phrases that you can say to trigger the intent which will run a particular part of your code
+* use as many ways as possible and list them here. the more you have less likely you will have bugs
+* what might a user say to invoke this intent 
+
+** alexa, ask <invokation name> to <sample utterances>
+
+** aws lambda: lets you run your code without provisioning or managing service you pay only for the compute time you consume   
+    1 million request per month is free , 20 cent per million 
+
+* use serverless repository provided by aws as template for alexa skill 
+* the lambda function that you deploy here already has nodejs alexa sdk so no need to include them  
+* it also adds alexa skill kit trigger automatically 
+* it also connects to cloud watch as well so all of your logs are centralized in one place 
+ 
+* ARN is the amazon resource name 
+
 * build, test, launch, measure tabs
 * custom tab, skill builder check list
-    1. give skill invokation name 
+    1. give skill invokation name : cant change after publication 
     2. create intent name
+    3. define sample utterances 
+    3. save model 
+    4. build model (takes a min or two)
+       if you make any changes you have to rebuild the model 
+    5. before configuring end points you have to create our lambda function 
+    6. go to aws lamda 
+    7. alternatively go to products and aws serverless lambda repository
+    8. browse all application
+    9. search for alexa fact skill 
+    10. choose alexa nodejs fact skill 
+    11. use one of the lambda regions that supports alexa skills
+    12. give application name under configure application parameters 
+    13. click deploy 
+    14. view cloudformation stack to see the build process
+    15. click on functions on left 
+    16. you can see the cloudwatch, skill kit, serverless repo all linked together 
+    17. under runtime you can see nodejs running 
+    18. you also have the cloud 9 ide that we have full access to 
+    19. on node modules you can see alexa skill kit listed 
+    20. copy the arn 
+    21. go back to alexa skill console and under endpoint 
+    22. go to service endpoint type and choose aws lambda arn 
+    23. paste your value in the default region 
+    24. save endpoints 
+    25. go back to build page you will see the checklist completed 
+    26. go to test enable testing 
+    27. go to lambda skill 
+    28. add your code for response and handlers and the data
+    29. go to test and ask for it
+    30. you can see the json data between the skill set and the alexa 
+
+---------------------------------------------------------------------------------------------------
+
+index.js 
+* you define and register your intents, each handler has two parts 
+    1. canhandle function that defines what events the handler response to 
+    2. handle function that contains the logic on how the handler response 
+    
+* we have sections for each intent that is defined in our alexa skill 
+* all of the request and routing happens in the canhandle function it is used to determine which intent is being triggered
+* we check the type and name of the request 
+* you trigger an intent with sample utterances and the appropriate block of code is called  
+*  responsebuilder is a helper function built in alexa sdk to build the output that will be returned 
+* all the responses between alexa and your skill is entirely done with simple json objects that travel back and forth 
+* a card is a visual response that you can see in the alexa companion app in your mobile or alexa website
+*  
