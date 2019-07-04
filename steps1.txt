@@ -3,4 +3,48 @@
 3. build the interactive model for your skill 
 4. select JSON editor under interaction model 
 5. add code to the editor 
-6. 
+
+--------------------------------------------
+
+* no need to build if you are changing the code, only when you make changes to alexa skill kit you have to build 
+import random 
+* speech_output = compliments[random.randint(0,len(compliments)-1)]
+---------------------------------------------
+1. give invocation name 
+2. intents: what we respond with alexa, for specific intent do specific thing
+3. give sample utterances for each intent 
+4. create end-points (follow the steps below)
+5. go to aws lambda 
+6. go to give function name and iam roles 
+7. go to endpoint from alexa developer console copy the aws lambda arn 
+8. go to alexa skill kit under triggers go to skill id and paste there 
+9. copy arn and paste in default region under endpoints 
+10. save endpoints 
+11. build model 
+12. test 
+13. for custom intent, add on custom intent, give it utterances. 
+
+
+----------------------------------------------------------
+main functions 
+
+    1. build_speechlet_response(title, output, reprompt_text, should_end_session):
+    2. build_response(session_attributes, speechlet_response):
+    3. get_test_response():
+    4. get_welcome_response():
+    5. handle_session_end_request():
+    6. on_session_started(session_started_request, session):
+    7. on_launch(launch_request, session):
+    8. on_intent(intent_request, session):
+    9. on_session_ended(session_ended_request, session):
+    10. lambda_handler(event, context):
+
+1. when you call alexa, the function is invoked, 
+2. the lambda_handler function is invoked which has event and context 
+3. the on_session_started and on_launch is invoked 
+4. when application is running, on_intent function is running at that point
+5. after ending, session_ended_request is made
+
+6. on_session_started initialize variables etc. 
+7. on_intent has all the different intents which are triggered by our utterances.
+8. each intent returns something 

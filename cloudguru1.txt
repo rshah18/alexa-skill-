@@ -91,3 +91,7 @@ index.js
 * all the responses between alexa and your skill is entirely done with simple json objects that travel back and forth 
 * a card is a visual response that you can see in the alexa companion app in your mobile or alexa website
 *  
+
+-------------------------------------------------------------------------------------------------
+    Invocation is how to get to your skill. 
+    intents are actions 

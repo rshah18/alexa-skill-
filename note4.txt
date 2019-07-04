@@ -1,0 +1,4 @@
+*   alexa skill kit: you can create a skill 
+    alexa voice service: you can use to a device
+
+* 
